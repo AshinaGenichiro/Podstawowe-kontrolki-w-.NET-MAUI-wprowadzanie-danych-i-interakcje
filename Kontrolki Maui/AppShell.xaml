@@ -5,10 +5,20 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Kontrolki_Maui"
     Title="Kontrolki_Maui">
+    <TabBar>
+        <Tab Title="Zadanie 18.2">
+            <ShellContent
+                      Title="Home"
+                      ContentTemplate="{DataTemplate local:MainPage}"
+                      Route="MainPage" />
+        </Tab>
+        <Tab Title="Zadanie 18.3">
+            <ShellContent
+                Title="NewPage1"
+                ContentTemplate="{DataTemplate local:NewPage1}"
+                Route="NewPage1"
+                />
+        </Tab>
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
+    </TabBar>
 </Shell>

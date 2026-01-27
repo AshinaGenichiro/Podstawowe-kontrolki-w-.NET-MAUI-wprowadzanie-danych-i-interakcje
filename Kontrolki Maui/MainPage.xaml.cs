@@ -17,7 +17,6 @@
             bool subjectEntryValidation = false;
             bool messageEditorValidation = false;
             bool entryMessage = false;
-            var buttonAlert = sender as Button;
 
             if(string.IsNullOrWhiteSpace(nameEntry.Text))
             {
@@ -63,7 +62,7 @@
             {
                 entryMessage = true;
             }
-            if (buttonAlert != null && entryMessage == true)
+            if ( entryMessage == true)
             {
                 await DisplayAlertAsync(
                     "Wysłano",
@@ -77,9 +76,9 @@
 
 //*****************************************************
 //nazwa funkcji: formAlert
-// opis funkcji: wyświetla alert po naciśnięciu przycisku
+// opis funkcji: przeprowadza walidacje oraz wyświetla alert po naciśnięciu przycisku
 // parametry wejściowe: object sender, EventArgs e(standardowe parametry dla zdarzeń object sender odnosi sie do obiektu
 // ktory wywołał zdarzenie, a EventsArgs e zawiera dane zdarzenia)
-// zwracany typ : void(brak) 
+// zwracany typ : void (brak) 
 //  autor: Kacper Z.
 //***************************************************

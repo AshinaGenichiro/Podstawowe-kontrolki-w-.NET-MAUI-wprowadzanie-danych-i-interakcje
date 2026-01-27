@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Kontrolki_Maui.NewPage1"
+             Title="NewPage1">
+    <VerticalStackLayout>
+
+        <VerticalStackLayout
+        Spacing="10">
+            <Label
+                Text="Powiadomienia"
+                Style="{StaticResource Headline}"
+                />
+            <HorizontalStackLayout
+            Spacing="10">
+             <Label
+                Text="Wyłącz powiadomienia push"/>
+             <Switch 
+                x:Name="PushNotificationSwitch"
+                IsToggled="False"/>
+         </HorizontalStackLayout>
+         <HorizontalStackLayout
+            Spacing="10">
+            <Label
+                Text="Powiadomienia e-mail"/>
+            <Switch 
+                x:Name="EmilNotificationSwitch"
+                IsToggled="False"/>
+         </HorizontalStackLayout>
+         <HorizontalStackLayout
+            Spacing="10">
+            <Label
+                 Text="Powiadomienia SMS"/>
+            <Switch
+                 x:Name="SMSNotificationSwitch"
+                 IsToggled="False"/>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+    <VerticalStackLayout>
+            <Label
+                 Text="Wyglad"
+                 Style="{StaticResource Headline}"/>
+            <HorizontalStackLayout 
+                Spacing="10">
+                <Label
+                    Text="Tryb ciemny"/>
+                <Switch
+                    x:Name="darkModeSwitch"
+                    IsToggled="False"/>
+        </HorizontalStackLayout>
+            <HorizontalStackLayout>
+            </HorizontalStackLayout>
+            <Label
+            Text="Rozmiar Czacionki"/>
+        <Slider
+            Maximum="24"
+            Minimum="12"
+            Value="16"
+            x:Name="fontSizeSlider"/>
+           <Label
+              x:Name="fontSizeLabel"
+              BindingContext="{x:Reference fontSizeSlider}"
+              Text="{Binding Value, StringFormat='Font size wynosi: {0:F0}px'}"/>
+        </VerticalStackLayout>
+        <VerticalStackLayout>
+            <Label
+                Text="Prywatność"
+                 Style="{StaticResource Headline}"/>
+            <HorizontalStackLayout>
+                <Label
+                Text="Udostępniaj Dane analityczne:"/>
+            <CheckBox
+                x:Name="shareDataCheckBox"
+                IsChecked="False"/>
+        </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label
+                 Text="Personalizowane reklamy:"/>
+            <CheckBox
+                x:Name="personalizedAdsCheckBox"
+                IsChecked="False"/>
+        </HorizontalStackLayout>
+        </VerticalStackLayout>
+        <VerticalStackLayout>
+            <Label
+                 Text="Stopka"
+                 Style="{StaticResource Headline}"/>
+            <Button
+                x:Name="saveSettingsButton"
+                Text="Zapisz ustawienia"
+                Clicked="aggredOnAlert"
+                />
+            <Button
+                BackgroundColor="Gray"
+                x:Name="resetSettingsButton"
+                Text="Resetuj ustawienia"/>
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
