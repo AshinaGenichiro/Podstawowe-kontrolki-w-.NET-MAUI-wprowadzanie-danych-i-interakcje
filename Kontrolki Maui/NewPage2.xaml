@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Kontrolki_Maui.NewPage2"
+             Title="NewPage2">
+    <VerticalStackLayout>
+        <Entry
+           Placeholder="Wpisz kwotę rachunku"
+           x:Name="billEntry"
+           Keyboard="Numeric"
+           Text="0"
+           TextChanged="calculateTipEntry"/>
+        <Slider
+            x:Name="tipPercentageSlider"
+            Maximum="30"
+            Minimum="0"
+            Value="15"
+            ValueChanged="calculateTipSlider"/>
+        <Label
+            x:Name="tipPercentageLabel"
+            BindingContext="{x:Reference tipPercentageSlider}"
+            Text="{Binding Value, StringFormat='Napiwek: {0:F0}%'}"/>
+        <HorizontalStackLayout>
+            <Label
+                Text="Podziel Rachunek"/>
+            <Switch
+                x:Name="shareBillSwitch"
+                Toggled="shareBill"
+                IsToggled="False"/>
+        </HorizontalStackLayout>
+        <Entry
+            Placeholder="Liczba osób"
+            x:Name="numberOfPeopleEntry"
+            Keyboard="Numeric"
+            IsVisible="False"
+            TextChanged="calculateTipEntry"/>
+        <Label
+            x:Name="totalTipLabel"
+            Text="Napiwek: 0.00zł"/>
+        <Label
+            x:Name="totalBillLabel"
+            Text="Kwota: 0 zł"/>
+        <Label
+            x:Name="amountPerPersonLabel"
+            Text="Kwota na osobę: 0.00zł"
+            IsVisible="False"/>
+        
+        <HorizontalStackLayout
+            Spacing="10">
+            <Button
+                x:Name="calculate10TipButton"
+                Text="10%"
+                Clicked="showTip10"/>
+            <Button
+                 x:Name="calculate15TipButton"
+                 Text="15%"
+                 Clicked="showTip15"/>
+            <Button
+                 x:Name="calculate20TipButton"
+                 Text="20%"
+                 Clicked="showTip20"/>
+        </HorizontalStackLayout>
+        
+    </VerticalStackLayout>
+</ContentPage>

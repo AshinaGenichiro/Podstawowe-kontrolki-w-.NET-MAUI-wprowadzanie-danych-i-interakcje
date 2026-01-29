@@ -19,6 +19,12 @@
                 Route="NewPage1"
                 />
         </Tab>
-
+        <Tab Title="Zadanie 18.4">
+            <ShellContent
+                Title="NewPage2"
+                ContentTemplate="{DataTemplate local:NewPage2}"
+                Route="NewPage2"
+                />
+        </Tab>
     </TabBar>
 </Shell>

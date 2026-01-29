@@ -8,7 +8,7 @@ public partial class NewPage1 : ContentPage
 	}
     private async void aggredOnAlert(object sender, EventArgs e)
     {
-        var acceptedServices = new System.Collections.Generic.List<string>();
+        var acceptedServices = new List<string>();
 
         bool PushNotification = false;
         bool EmailNotification = false;
