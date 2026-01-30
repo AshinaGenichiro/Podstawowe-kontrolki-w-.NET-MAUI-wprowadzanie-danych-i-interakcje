@@ -66,7 +66,8 @@ public partial class NewPage2 : ContentPage
 			double amountPerPerson = totalBill / numberOfPeople;
 			amountPerPersonLabel.Text = $"Kwota na osobê: {amountPerPerson:F2}";
             totalBillLabel.Text = $"Ca³kowity rachunek: {totalBill:F2}";
-			}else
+			}
+			else
 			{
                 amountPerPersonLabel.Text = $"Nie mozesz rozdzieliæ kwoty na jedn¹ osobê";
             }
@@ -74,3 +75,31 @@ public partial class NewPage2 : ContentPage
 		}
 
 	}
+/************************************************
+ * Nazwa funkcji: ShowTip
+ * Opis funkcji: funkcja zmienia wartosc napiwku w sliderze
+ * parametry wejœciowe: object sender, EventArgs e(standardowe parametry dla zdarzeñ object sender odnosi sie do obiektu
+ * ktory wywo³a³ zdarzenie, a EventsArgs e zawiera dane zdarzenia)
+ *
+ *zwracany typ: brak(void)
+ *autor kacper
+ * *********************************************
+ * Nazwa funkcji:ShareBill
+ * Opis funckji: po naciœniêciu na switcha funkcja umo¿liwa podzia³ rachunku na x osób
+ * parametry wejœciowe: object sender, EventArgs e(standardowe parametry dla zdarzeñ object sender odnosi sie do obiektu
+ * ktory wywo³a³ zdarzenie, a EventsArgs e zawiera dane zdarzenia * 
+ * 
+ * zwracany typ brak void
+ * autor kacper 
+ * ***********************************************
+ * Nazwa funckji: UpdateTip
+ * opis funkcji:funkcja olbicza napiwek oraz rozdziela go na x osób, je¿eli ktoœ sie zgodzi³ na 
+ * podzia³ rachunku
+ * parametry brak
+ * autor kacper
+ * ************************************************
+ * nazwa funkcji: calculateTipEntry
+ * opis funkcji funkcja aktualizuje wartosci dla dwóch akcji zmiany wartosci i zmiany tekstu
+ * parametry ValueChangedEventArgs gdy zmieni sie wartosc slidera,TextChangedEventArgs gdy zmieni sie ilosc osob,b¹dŸ cena 
+ * autor kacper 
+ */

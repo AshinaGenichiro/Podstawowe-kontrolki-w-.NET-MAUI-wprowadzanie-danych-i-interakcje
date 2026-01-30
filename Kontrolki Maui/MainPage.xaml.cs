@@ -80,5 +80,5 @@
 // parametry wejściowe: object sender, EventArgs e(standardowe parametry dla zdarzeń object sender odnosi sie do obiektu
 // ktory wywołał zdarzenie, a EventsArgs e zawiera dane zdarzenia)
 // zwracany typ : void (brak) 
-//  autor: Kacper Z.
+//  autor: Kacper 
 //***************************************************

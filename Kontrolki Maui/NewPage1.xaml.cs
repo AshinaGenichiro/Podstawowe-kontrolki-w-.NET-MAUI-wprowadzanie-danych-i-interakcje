@@ -62,5 +62,5 @@ public partial class NewPage1 : ContentPage
  // parametry wejœciowe: object sender, EventArgs e(standardowe parametry dla zdarzeñ object sender odnosi sie do obiektu
  // ktory wywo³a³ zdarzenie, a EventsArgs e zawiera dane zdarzenia)
  // zwracany typ : void (brak) 
- //  autor: Kacper Z.
+ //  autor: Kacper 
  //***************************************************
