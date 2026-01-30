@@ -1,4 +1,4 @@
-using Java.Lang;
+
 
 namespace Kontrolki_Maui;
 
@@ -56,14 +56,13 @@ public partial class NewPage2 : ContentPage
 
 		if (!string.IsNullOrEmpty(billEntry.Text) && !string.IsNullOrEmpty(numberOfPeopleEntry.Text))
 		{
-			if(int.Parse(numberOfPeopleEntry.Text) >=2 && typeof(numberOfPeopleEntry.text) == typeof(Number) )
+			if(int.Parse(numberOfPeopleEntry.Text) >=2)
 			{
-
+			int numberOfPeople = int.Parse(numberOfPeopleEntry.Text);
 			double tipProcentage = tipPercentageSlider.Value;
 			double value = double.Parse(billEntry.Text);
 			double tipValue = value * (tipProcentage / 100);
 			double totalBill = value + tipValue;
-			int numberOfPeople = int.Parse(numberOfPeopleEntry.Text);
 			double amountPerPerson = totalBill / numberOfPeople;
 			amountPerPersonLabel.Text = $"Kwota na osobê: {amountPerPerson:F2}";
             totalBillLabel.Text = $"Ca³kowity rachunek: {totalBill:F2}";
